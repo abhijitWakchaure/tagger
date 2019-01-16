@@ -20,7 +20,7 @@
 
   <div *ngIf="currentTag.text || allTags" class="tag-chip">
     <div class="tag-text">
-      {{ currentTag.text }}
+      {{ currentTag.text | lowercase }}
     </div>
   </div>
 

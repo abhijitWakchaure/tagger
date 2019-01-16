@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Tag } from "./models/Tag";
 
 @Component({
   selector: "app-root",
@@ -46,6 +47,7 @@ export class AppComponent {
 
   handleTab(event) {
     if (this.currentTag.text == "") return;
+    this.currentTag.text = this.currentTag.text.toLowerCase();
     this.currentTag.bgcolor = this.calculateBgColor(this.currentTag);
     this.currentTag.color = this.calculateColor(this.currentTag);
     this.addTag(this.currentTag);
@@ -71,7 +73,14 @@ export class AppComponent {
   }
 
   calculateBgColor(t: Tag) {
-    var str = Math.random().toString(36).substring(10) + t.text + Math.random().toString(36).substring(1);
+    var str =
+      Math.random()
+        .toString(36)
+        .substring(10) +
+      t.text +
+      Math.random()
+        .toString(36)
+        .substring(1);
     var hash = 0;
     for (var i = 0; i < str.length; i++) {
       hash = str.charCodeAt(i) + ((hash << 5) - hash);

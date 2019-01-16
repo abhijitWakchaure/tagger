@@ -1,0 +1,21 @@
+.tag-chip {
+  display: inline-block;
+  padding: 0 25px;
+  margin: 2px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+.tag-text {
+  font-weight: 600;
+}
+.tag-cross {
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  font-weight: 100;
+  padding-left: 10px;
+  font-size: 30px;
+}

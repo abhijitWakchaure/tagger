@@ -27,7 +27,7 @@
   <div *ngIf="allTags" class="pt-2">
     <div *ngFor="let tag of allTags" class="tag-chip" [ngStyle]="{'background-color': tag.bgcolor}">
         <div class="tag-text" [ngStyle]="{'color': tag.color}">
-          {{ tag.text }} <span class="tag-cross">&times;</span>
+          {{ tag.text }} <span class="tag-cross" (click)="removeTag(tag)" >&times;</span>
         </div>
     </div>
   </div>
